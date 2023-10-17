@@ -16,6 +16,16 @@ public class Product {
         this.price = price;
     }
 
+    //copy constructor
+     public Product(Product p,String sku, String name, String description, String vendor, String slug, double price) {
+        this.sku = p.sku;
+        this.name = p.name;
+        this.description = p.description;
+        this.vendor = p.vendor;
+        this.slug = p.slug;
+        this.price = p.price;
+    }
+
     // Getters and setters for the product attributes
 
     public String getSku() {
@@ -50,4 +60,13 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+
+
+    
+    // to string to display and check all info.
+    public String toString() {
+		return "The [sku=" + sku + ", The name=" + name + ", The description=" + description + ", The vendor=" + vendor + ", The slug=" + slug+ ", The price=" + price + "]";
+	}
+
+
 }
