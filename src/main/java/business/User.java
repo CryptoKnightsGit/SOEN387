@@ -20,6 +20,13 @@ public class User {
         this.password = password;
     }
 
+    //Copy constructor
+    public User(User u,long userId, String username, String email, String password) {
+        this.userId = u.userId;
+        this.username = u.username;
+        this.email = u.email;
+        this.password = u.password;
+    }
     // public Product getProduct(String sku) {
     //     // Replace "products.json" with the path to your local JSON file
     //     String jsonFilePath = "products.json";
@@ -88,4 +95,12 @@ public class User {
     }
 
     // Other common user-related methods can be added as needed
+
+
+    //toString to display all the pertinent info
+    public String toString() {
+		return "The [userId=" + userId + ", The username=" + username
+				+ ", The email=" + email + ", The password=" + password + "]";
+	}
+
 }
