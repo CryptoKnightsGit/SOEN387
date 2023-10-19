@@ -1,7 +1,15 @@
 package business;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
 
 public class Staff extends User {
     // Constructor
@@ -10,13 +18,51 @@ public class Staff extends User {
     }
 
       // Staff-specific method to create a new product
-    public Product createProduct(String sku, String name) {
+    public void createProduct(int sku, String name, String description, String vendor, String slug, double price) {
         // Create a new product with the given SKU and name
-        Product newProduct = new Product(sku, name, "", "", "", 0.0);  
+        Product newProduct = new Product(sku, name, description, vendor, slug, price);  
 
         // Perform any additional logic, such as adding the new product to the database
+        try{
+            //read existing product catalog
+            FileReader fileReader = new FileReader("src\\main\\products.json");
+            List<Product> products = new Gson().fromJson(fileReader, new TypeToken<List<Product>>() {}.getType());
+            fileReader.close();
 
-        return newProduct;
+            // Check if a product with the same SKU already exists
+            int newProductSKU = newProduct.getSku();
+            boolean duplicateSKU = false;
+            for (int i = 0; i < products.size(); i++) {
+                JsonObject productJson = products.get(i).toJsonObject();
+                int existingSKU = productJson.get("sku").getAsInt();
+
+                if (newProductSKU == existingSKU) {
+                    duplicateSKU = true;
+                    break;
+                }
+            }
+            if (duplicateSKU) {
+                System.err.println("A product with the same SKU already exists. The new product cannot be added.");
+                return;
+            }
+
+            // Add the new product to the catalog
+            products.add(newProduct);
+
+            // Create a Gson object with pretty printing enabled
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+            // Write the updated product catalog back to the JSON file
+            FileWriter fileWriter = new FileWriter("src\\main\\products.json");
+            fileWriter.write(gson.toJson(products));
+            fileWriter.close();
+            System.out.println("Product added to the catalog successfully.");
+        }catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Error adding product to the product catalog.");
+        }
+        
+        
     }
 
     public void updateProduct(Product product, String newName, String newDescription, double newPrice) {
@@ -29,10 +75,25 @@ public class Staff extends User {
     }
 
     // Staff-specific method to download a list of all products
-    public List<Product> downloadProductList() {
-        // Implement staff-specific functionality to download a list of products
-        // You can return a list of Product objects or a file, depending on your requirements
-        return new ArrayList<Product>();  // Placeholder return value
+     public void downloadProductCatalog() {
+        try {
+            // Read the existing JSON file
+            FileReader fileReader = new FileReader("src\\main\\products.json");
+            List<Product> products = new Gson().fromJson(fileReader, new TypeToken<List<Product>>() {}.getType());
+
+            // Create a Gson object with pretty printing enabled
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+            // Create a new JSON file with the product data
+            FileWriter fileWriter = new FileWriter("src\\main\\downloadedCatalog.json");
+            fileWriter.write(gson.toJson(products));
+            fileWriter.close();
+
+            System.out.println("Product catalog downloaded successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Error downloading the product catalog.");
+        }
     }
 
     // Additional staff-specific methods can be added as needed

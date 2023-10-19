@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.List;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 public class User {
     private long userId;        // Unique identifier for the user
@@ -27,32 +28,50 @@ public class User {
         this.email = u.email;
         this.password = u.password;
     }
-    // public Product getProduct(String sku) {
-    //     // Replace "products.json" with the path to your local JSON file
-    //     String jsonFilePath = "products.json";
 
-    //     try {
-    //         // Read the JSON data from the file
-    //         FileReader fileReader = new FileReader(jsonFilePath);
-    //         List<Product> products = new Gson().fromJson(fileReader, new TypeToken<List<Product>>() {
-    //         }.getType());
+    public Product getProduct(int sku) {
+        // Replace "products.json" with the path to your local JSON file
+        String jsonFilePath = "src\\main\\products.json";
 
-    //         // Search for the product by SKU
-    //         for (Product product : products) {
-    //             if (product.getSku().equals(sku)) {
-    //                 return product; // Return the product if found
-    //             }
-    //         }
+        try {
+            // Read the JSON data from the file
+            FileReader fileReader = new FileReader(jsonFilePath);
+            List<Product> products = new Gson().fromJson(fileReader, new TypeToken<List<Product>>() {
+            }.getType());
 
-    //         // Handle the case when the product with the given SKU is not found
-    //         // You can throw an exception or return null, depending on your application's design
-    //         return null;
-    //     } catch (IOException e) {
-    //         // Handle any potential IO errors (e.g., file not found, JSON parsing issues)
-    //         e.printStackTrace();
-    //         return null;
-    //     }
-    // }
+            // Search for the product by SKU
+            for (Product product : products) {
+                if (product.getSku() == sku) {
+                    return product; // Return the product if found
+                }
+            }
+
+            // Handle the case when the product with the given SKU is not found
+            // You can throw an exception or return null, depending on your application's design
+            return null;
+        } catch (IOException e) {
+            // Handle any potential IO errors (e.g., file not found, JSON parsing issues)
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public List<Product> getAllProducts() {
+        // Replace "products.json" with the path to your local JSON file
+        String jsonFilePath = "src\\main\\products.json";
+
+        try {
+            // Read the JSON data from the file
+            FileReader fileReader = new FileReader(jsonFilePath);
+            List<Product> products = new Gson().fromJson(fileReader, new TypeToken<List<Product>>() {}.getType());
+
+            return products; // Return the list of all products
+        } catch (IOException e) {
+            // Handle any potential IO errors (e.g., file not found, JSON parsing issues)
+            e.printStackTrace();
+            return null;
+        }
+    }
 
 
     // Getters and setters for attributes

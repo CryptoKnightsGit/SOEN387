@@ -1,13 +1,16 @@
 package business;
+
+import com.google.gson.JsonObject;
+
 public class Product {
-    private String sku;
+    private int sku;
     private String name;
     private String description;
     private String vendor;
     private String slug;
     private double price;
 
-    public Product(String sku, String name, String description, String vendor, String slug, double price) {
+    public Product(int sku, String name, String description, String vendor, String slug, double price) {
         this.sku = sku;
         this.name = name;
         this.description = description;
@@ -26,9 +29,20 @@ public class Product {
         this.price = p.price;
     }
 
+    public JsonObject toJsonObject() {
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("sku", sku);
+        jsonObject.addProperty("name", name);
+        jsonObject.addProperty("description", description);
+        jsonObject.addProperty("vendor", vendor);
+        jsonObject.addProperty("slug", slug);
+        jsonObject.addProperty("price", price);
+        return jsonObject;
+    }
+
     // Getters and setters for the product attributes
 
-    public String getSku() {
+    public int getSku() {
         return sku;
     }
 
@@ -65,7 +79,7 @@ public class Product {
     
     // to string to display and check all info.
     public String toString() {
-		return "The [sku=" + sku + ", The name=" + name + ", The description=" + description + ", The vendor=" + vendor + ", The slug=" + slug+ ", The price=" + price + "]";
+		return "[Sku=" + sku + ", Name=" + name + ", Description=" + description + ", Vendor=" + vendor + ", Slug=" + slug+ ", Price=" + price + "]";
 	}
 
 
