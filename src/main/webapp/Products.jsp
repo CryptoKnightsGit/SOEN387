@@ -38,44 +38,44 @@
       <section class="shop-section">
         <div class="shop-images">
           <div class="shop-link">
-            <h3>Shop Laptops</h3>
+            <h3>Laptop</h3>
             <img src="shop1.png" alt="card">
-            <a href="#">Shop now</a>
+            <a href="Product.jsp">Shop now</a>
           </div>
           <div class="shop-link">
-            <h3>Shop Smartwatches</h3>
+            <h3>Smartwatch</h3>
             <img src="shop2.png" alt="card">
-            <a href="#">Shop now</a>
+            <a href="Product.jsp">Shop now</a>
           </div>
           <div class="shop-link">
             <h3>PC</h3>
             <img src="shop3.png" alt="card">
-            <a href="#">Shop now</a>
+            <a href="Product.jsp">Shop now</a>
           </div>
           <div class="shop-link">
             <h3>headphones</h3>
             <img src="shop4.png" alt="card">
-            <a href="#">Shop now</a>
+            <a href="Product.jsp">Shop now</a>
           </div>
           <div class="shop-link">
-            <h3>Shop Laptops</h3>
+            <h3>Laptop</h3>
             <img src="shop1.png" alt="card">
-            <a href="#">Shop now</a>
+            <a href="Product.jsp">Shop now</a>
           </div>
           <div class="shop-link">
-            <h3>Shop Smartwatches</h3>
+            <h3>Smartwatch2.0</h3>
             <img src="shop2.png" alt="card">
-            <a href="#">Shop now</a>
+            <a href="Product.jsp">Shop now</a>
           </div>
           <div class="shop-link">
             <h3>PC</h3>
             <img src="shop3.png" alt="card">
-            <a href="#">Shop now</a>
+            <a href="Product.jsp">Shop now</a>
           </div>
           <div class="shop-link">
             <h3>headphones</h3>
             <img src="shop4.png" alt="card">
-            <a href="#">Shop now</a>
+            <a href="Product.jsp">Shop now</a>
           </div>
         </div>
       </section>

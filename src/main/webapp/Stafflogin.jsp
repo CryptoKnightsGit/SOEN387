@@ -24,6 +24,8 @@
         <li>
           <a href="CourseCart.jsp">CourseCart</a>
         </li>
+
+    remove this
         <li>
           <a href="Stafflogin.jsp">StaffLog</a>
         </li>
