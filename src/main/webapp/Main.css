@@ -1,0 +1,9 @@
+body {
+    background-color: teal;
+    
+  }
+  
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
