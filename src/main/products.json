@@ -18,5 +18,13 @@
     "name": "Product 3",
     "description": "Description for Product 3",
     "price": 49.99
+  },
+  {
+    "sku": 321,
+    "name": "staffCreatedProduct",
+    "description": "This was created in the testDriver.java",
+    "vendor": "amazon",
+    "slug": "product-321",
+    "price": 99.56
   }
 ]

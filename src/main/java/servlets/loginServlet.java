@@ -16,8 +16,7 @@ public class loginServlet extends jakarta.servlet.http.HttpServlet {
         String u = request.getParameter("username");
 		String p = request.getParameter("password");
 
-        
-
+    
         // Ill have to change  the if statements to match the the actual stored username we will use for staffs and passwords as well
         //default for now.
         if(u.equalsIgnoreCase("staff") && p.equalsIgnoreCase("secret"))
@@ -31,7 +30,6 @@ public class loginServlet extends jakarta.servlet.http.HttpServlet {
 			req.include(request, response);
         }       
     }
-
 
 
 }
