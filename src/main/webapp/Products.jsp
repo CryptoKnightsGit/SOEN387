@@ -1,3 +1,4 @@
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,6 +35,13 @@
       </ul>
     </nav>
   </div>
+
+  <%
+
+out.print("<p>Hey!</p>");    
+out.print("<p>How are you?</p>");
+
+%>
 
       <section class="shop-section">
         <div class="shop-images">
