@@ -1,3 +1,6 @@
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ page import="java.util.List" %>
+<%@ page import="business.Product, business.User" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +12,6 @@
 <link href="Navbar.css" rel="stylesheet" type="text/css"/>
 
 </head>
-
-
-
 
 <body>
 
@@ -34,53 +34,27 @@
       </ul>
     </nav>
   </div>
-
-      <section class="shop-section">
-        <div class="shop-images">
-          <div class="shop-link">
-            <h3>Laptop</h3>
-            <img src="shop1.png" alt="card">
-            <a href="Product.jsp">Shop now</a>
-          </div>
-          <div class="shop-link">
-            <h3>Smartwatch</h3>
-            <img src="shop2.png" alt="card">
-            <a href="Product.jsp">Shop now</a>
-          </div>
-          <div class="shop-link">
-            <h3>PC</h3>
-            <img src="shop3.png" alt="card">
-            <a href="Product.jsp">Shop now</a>
-          </div>
-          <div class="shop-link">
-            <h3>headphones</h3>
-            <img src="shop4.png" alt="card">
-            <a href="Product.jsp">Shop now</a>
-          </div>
-          <div class="shop-link">
-            <h3>Laptop</h3>
-            <img src="shop1.png" alt="card">
-            <a href="Product.jsp">Shop now</a>
-          </div>
-          <div class="shop-link">
-            <h3>Smartwatch2.0</h3>
-            <img src="shop2.png" alt="card">
-            <a href="Product.jsp">Shop now</a>
-          </div>
-          <div class="shop-link">
-            <h3>PC</h3>
-            <img src="shop3.png" alt="card">
-            <a href="Product.jsp">Shop now</a>
-          </div>
-          <div class="shop-link">
-            <h3>headphones</h3>
-            <img src="shop4.png" alt="card">
-            <a href="Product.jsp">Shop now</a>
-          </div>
-        </div>
-      </section>
-
-
+  <% 
+  User user = new User(); 
+  List<Product> allProducts = user.getAllProducts(); 
+  Product myProduct = new Product(13, "pname", "pdescription", "pvendor", "pslug", 12.9);
+%>
+<% if (allProducts != null) { %>
+  <ul>
+      <% for (int i = 0; i < allProducts.size(); i++) { %>
+          <li>
+              <p>${fn:escapeXml(allProducts.get(i).getName())}</p>
+              <h4><%= allProducts.get(i).getName() %></h4>
+              <p><%= allProducts.get(i).getDescription() %></p>
+              <p><%= allProducts.get(i).getPrice() %></p>
+          </li>
+      <% } %>
+  </ul>
+<% } else { %>
+  <p>No products available.</p>
+  <p><%= myProduct.getName() %></p>
+  <p>${fn:escapeXml(myProduct.getName())}</p>
+<% } %>
 
 
 <footer>   
