@@ -35,6 +35,7 @@ public class productsServlet extends jakarta.servlet.http.HttpServlet{
       //may have to edit this.
        private String slugFromInfo(String pathInfo) {
          Product p= new Product(123,"Product 1","Description for Product 1","Concordia","Product-123",29.99);
+         
          return  p.getSlug();
     }
 

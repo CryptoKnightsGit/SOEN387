@@ -15,9 +15,14 @@ public class downloadServlet  extends jakarta.servlet.http.HttpServlet {
 
     //not sure i believe ill have to use response to send back info instead the below....
 
-    Staff staff = new Staff(3, "staff", "staff@gmail.com", "password");
-    staff.createProduct(321, "staffCreatedProduct", "This was created in the testDriver.java", "amazon", "product-321", 99.56);
-    staff.downloadProductCatalog();
+
+    Staff cata = new Staff(3, "staff", "staff@gmail.com", "password");
+    cata.createProduct(321, "staffCreatedProduct", "This was created in the testDriver.java", "amazon", "product-321", 99.56);
+    cata.downloadProductCatalog();
+
+    response.setContentType("application/pdf");
+    response.setHeader(null, null);
+
 
     }    
 }

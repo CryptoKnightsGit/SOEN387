@@ -12,4 +12,3 @@ business\Customer.class
 servlets\changePrdServlet.class
 business\User$1.class
 business\User.class
-servlets\testServlet.class

@@ -40,9 +40,10 @@
       <section class="shop-section">
         <div class="shop-images">
           <div class="shop-link">
-            <p>Product Name: ${product.name}</p>
-            <p>Description: ${product.description}</p>
-            <p>Price: ${product.price}</p>
+            <p><%= request.get %></p>
+            <p>Product Name:</p>
+            <p>Description:</p>
+            <p>Price:</p>
             <img src="shop1.png" alt="card">
           </div>
         </div>

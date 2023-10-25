@@ -31,22 +31,12 @@
           </ul>
         </nav>
       </div>
-      <form action = "testing">
-        Enter name : <input type="text" name = "n1" ><br>
-        Enter name2 : <input type="text" name = "n2" ><br>
-        <input type="submit">
-    </form>
-
-
 
 
 
       <div><img src="img1.png" alt="1" class="responsive"></div>
       <div><img src="img2.png" alt="2" class="responsive"></div>
       <div><img src="img3.png" alt="3" class="responsive"></div>
-
-
-
 
 
 
