@@ -22,15 +22,7 @@
           <a href="Products.jsp">ViewAllProducts</a>
         </li>
         <li>
-          <a href="CourseCart.jsp">CourseCart</a>
-        </li>
-
-    remove this
-        <li>
-          <a href="Stafflogin.jsp">StaffLog</a>
-        </li>
-        <li>
-          <a href="CreateProduct.jsp">Createprd</a>
+            <a href="index.jsp">Return to main login</a>
         </li>
       </ul>
     </nav>

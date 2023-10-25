@@ -36,14 +36,14 @@ public class testDriver {
     customer.addToCart(cartProduct2);
     customer.addToCart(cartProduct3);
 
-    List<Product> shoppingCart = customer.getShoppingCart();
+    List<Product> shoppingCart = customer.getCart();
     System.out.println("Shopping cart after adding all items:");
     for (Product shoppingCartProduct : shoppingCart){
         System.out.println(shoppingCartProduct.toString());
     }
 
     customer.removeFromCart(cartProduct1);
-    shoppingCart = customer.getShoppingCart();
+    shoppingCart = customer.getCart();
     System.out.println("\nShopping cart after removing sku 123:");
     for (Product shoppingCartProduct : shoppingCart){
         System.out.println(shoppingCartProduct.toString());

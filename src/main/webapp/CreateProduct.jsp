@@ -22,10 +22,7 @@
           <a href="Products.jsp">ViewAllProducts</a>
         </li>
         <li>
-          <a href="CourseCart.jsp">CourseCart</a>
-        </li>
-        <li>
-          <a href="Stafflogin.jsp">StaffLog</a>
+          <a href="index.jsp">Log out</a>
         </li>
         <li>
           <a href="CreateProduct.jsp">Createprd</a>

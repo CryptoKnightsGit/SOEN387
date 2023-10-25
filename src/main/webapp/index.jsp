@@ -26,7 +26,7 @@
             </li>
             <li>
                 
-              <a href="Stafflogin.jsp">StaffLog</a>
+              <a href="Stafflogin.jsp">Staff Login</a>
             </li>
           </ul>
         </nav>

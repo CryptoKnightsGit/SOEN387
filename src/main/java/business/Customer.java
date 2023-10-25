@@ -13,7 +13,7 @@ public class Customer extends User {
     }
 
     // Getters and setters for customer-specific attributes
-    public List<Product> getShoppingCart() {
+    public List<Product> getCart() {
         return shoppingCart;
     }
 

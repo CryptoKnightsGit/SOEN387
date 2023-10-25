@@ -13,6 +13,14 @@ public class User {
     private String email;       // User's email address
     private String password;    // User's password (hash or encrypted)
     
+    // Default constructor
+    public User(){
+        this.userId = 0;
+        this.username = "defaultUsername";
+        this.email = "defaultEmail";
+        this.password = "defaultPassword";
+    }
+
     // Constructor
     public User(long userId, String username, String email, String password) {
         this.userId = userId;

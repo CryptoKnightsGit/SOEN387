@@ -10,9 +10,6 @@
 
 </head>
 
-
-
-
 <body>
 
   <div class="wrapper">
@@ -40,19 +37,10 @@
       <section class="shop-section">
         <div class="shop-images">
           <div class="shop-link">
-            <p><%= request.get %></p>
-            <p>Product Name:</p>
-            <p>Description:</p>
-            <p>Price:</p>
             <img src="shop1.png" alt="card">
           </div>
         </div>
       </section>
-
-     
-    
-   
-
 
 <footer>   
       <div class="footer">
