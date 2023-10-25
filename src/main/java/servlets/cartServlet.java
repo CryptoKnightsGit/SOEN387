@@ -5,8 +5,6 @@ import java.util.List;
 
 import business.Customer;
 import business.Product;
-import business.ShoppingCart;
-import business.User;
 import jakarta.servlet.ServletException;
 
 public class cartServlet  extends jakarta.servlet.http.HttpServlet {
