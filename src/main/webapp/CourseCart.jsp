@@ -1,3 +1,6 @@
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ page import="java.util.List" %>
+<%@ page import="business.Product, business.User,business.ShoppingCart,business.Customer" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,15 +37,26 @@
     </nav>
   </div>
 
+  <% 
+  Customer c = new Customer(); 
+  Product tempcart = new Product(13, "pname", "pdescription", "pvendor", "pslug", 12.9);
+  List<Product> cart = c.removeFromCart(tempcart); 
 
-
-
-      <div>Section1</div>
-      <div>Section2</div>
-      <div>Section3</div>
-
-
-
+%>
+<% if (cart != null) { %>
+  <ul>
+      <% for (int i = 0; i < 3; i++) { %>
+          <li>
+              <p>${fn:escapeXml(cart.get(i).getName())}</p>
+              <h4><%= cart.get(i).getName() %></h4>
+              <p><%= cart.get(i).getDescription() %></p>
+              <p><%= cart.get(i).getPrice() %></p>
+          </li>
+      <% } %>
+  </ul>
+<% } else { %>
+  <p>Nothing in cart available.</p>
+<% } %>
 
 
 
