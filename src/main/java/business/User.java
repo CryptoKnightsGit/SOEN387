@@ -8,13 +8,13 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 public class User {
-    private long userId;        // Unique identifier for the user
-    private String username;    // User's username
-    private String email;       // User's email address
-    private String password;    // User's password (hash or encrypted)
-    
+    private long userId; // Unique identifier for the user
+    private String username; // User's username
+    private String email; // User's email address
+    private String password; // User's password (hash or encrypted)
+
     // Default constructor
-    public User(){
+    public User() {
         this.userId = 0;
         this.username = "defaultUsername";
         this.email = "defaultEmail";
@@ -29,8 +29,8 @@ public class User {
         this.password = password;
     }
 
-    //Copy constructor
-    public User(User u,long userId, String username, String email, String password) {
+    // Copy constructor
+    public User(User u, long userId, String username, String email, String password) {
         this.userId = u.userId;
         this.username = u.username;
         this.email = u.email;
@@ -55,7 +55,8 @@ public class User {
             }
 
             // Handle the case when the product with the given SKU is not found
-            // You can throw an exception or return null, depending on your application's design
+            // You can throw an exception or return null, depending on your application's
+            // design
             return null;
         } catch (IOException e) {
             // Handle any potential IO errors (e.g., file not found, JSON parsing issues)
@@ -71,7 +72,8 @@ public class User {
         try {
             // Read the JSON data from the file
             FileReader fileReader = new FileReader(jsonFilePath);
-            List<Product> products = new Gson().fromJson(fileReader, new TypeToken<List<Product>>() {}.getType());
+            List<Product> products = new Gson().fromJson(fileReader, new TypeToken<List<Product>>() {
+            }.getType());
 
             return products; // Return the list of all products
         } catch (IOException e) {
@@ -80,7 +82,6 @@ public class User {
             return null;
         }
     }
-
 
     // Getters and setters for attributes
     public long getUserId() {
@@ -117,17 +118,17 @@ public class User {
 
     // Additional methods for user-related functionality
     public boolean authenticate(String inputPassword) {
-        // Implement user authentication logic (e.g., compare inputPassword with stored password)
+        // Implement user authentication logic (e.g., compare inputPassword with stored
+        // password)
         return this.password.equals(inputPassword);
     }
 
     // Other common user-related methods can be added as needed
 
-
-    //toString to display all the pertinent info
+    // toString to display all the pertinent info
     public String toString() {
-		return "The [userId=" + userId + ", The username=" + username
-				+ ", The email=" + email + ", The password=" + password + "]";
-	}
+        return "The [userId=" + userId + ", The username=" + username
+                + ", The email=" + email + ", The password=" + password + "]";
+    }
 
 }

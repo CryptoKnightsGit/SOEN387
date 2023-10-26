@@ -1,6 +1,6 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page import="java.util.List" %>
-<%@ page import="business.Product, business.User" %>
+<%@ page import="business.Product" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,27 +34,20 @@
       </ul>
     </nav>
   </div>
-  <% 
-  User user = new User(); 
-  List<Product> allProducts = user.getAllProducts(); 
-  Product myProduct = new Product(13, "pname", "pdescription", "pvendor", "pslug", 12.9);
-%>
-<% if (allProducts != null) { %>
-  <ul>
-      <% for (int i = 0; i < allProducts.size(); i++) { %>
-          <li>
-              <p>${fn:escapeXml(allProducts.get(i).getName())}</p>
-              <h4><%= allProducts.get(i).getName() %></h4>
-              <p><%= allProducts.get(i).getDescription() %></p>
-              <p><%= allProducts.get(i).getPrice() %></p>
-          </li>
-      <% } %>
-  </ul>
-<% } else { %>
-  <p>No products available.</p>
-  <p><%= myProduct.getName() %></p>
-  <p>${fn:escapeXml(myProduct.getName())}</p>
-<% } %>
+  <% List<Product> allProducts = (List<Product>) request.getAttribute("allProducts"); %>
+    <% if (allProducts != null) { %>
+        <ul>
+            <% for (int i = 0; i < allProducts.size(); i++) { %>
+                <li>
+                    <h4><%= allProducts.get(i).getName() %></h4>
+                    <p><%= allProducts.get(i).getDescription() %></p>
+                    <p><%= allProducts.get(i).getPrice() %></p>
+                </li>
+            <% } %>
+        </ul>
+    <% } else { %>
+        <p>No products available.</p>
+    <% } %>
 
 
 <footer>   
