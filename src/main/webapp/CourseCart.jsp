@@ -39,12 +39,13 @@
 
   <% 
   Customer c = new Customer(); 
-  List<Product> cart = c.removeFromCart(null); 
-  Product cart = new Product(13, "pname", "pdescription", "pvendor", "pslug", 12.9);
+  Product tempcart = new Product(13, "pname", "pdescription", "pvendor", "pslug", 12.9);
+  List<Product> cart = c.removeFromCart(tempcart); 
+
 %>
 <% if (cart != null) { %>
   <ul>
-      <% for (int i = 0; i < cart.size(); i++) { %>
+      <% for (int i = 0; i < 3; i++) { %>
           <li>
               <p>${fn:escapeXml(cart.get(i).getName())}</p>
               <h4><%= cart.get(i).getName() %></h4>
