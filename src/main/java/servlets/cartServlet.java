@@ -32,14 +32,16 @@ public class cartServlet  extends jakarta.servlet.http.HttpServlet {
     protected void doDelete(jakarta.servlet.http.HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response)throws IOException, ServletException
     {
 
-        //need to add the list of the products
+    
+        Product p= new Product(123,"Product 1","Description for Product 1","Concordia","test",29.99);
         Customer customer = new Customer();
-        List<Product> cart = customer.removeFromCart(null);
-
-    // Set the cart list as an attribute in the request object
-    request.setAttribute("cart", cart);
+        
+        if(p!=null){
+        
+        List<Product> cart = customer.removeFromCart(p);
+         request.setAttribute("cart", cart);
     request.getRequestDispatcher("/CourseCart.jsp").forward(request, response);
-
+        }
 
     }
    
