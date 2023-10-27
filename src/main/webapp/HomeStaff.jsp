@@ -7,6 +7,7 @@
 <link href="Main.css" rel="stylesheet" type="text/css"/>
 <link href="Footer.css" rel="stylesheet" type="text/css"/>
 <link href="Navbar.css" rel="stylesheet" type="text/css"/>
+<link href="HomeStaff.css" rel="stylesheet" type="text/css"/>
 </head>
 
 
@@ -16,7 +17,7 @@
 
   <div class="wrapper">
     <nav>
-      <a href="index.jsp" class="logo">Logo</a>
+      <a href="#" class="logo">Logo</a>
       <ul>
         <li>
           <a href="Products.jsp">ViewAllProducts</a>
@@ -33,9 +34,12 @@
       </ul>
     </nav>
   </div>
+  <div id="main" >
+    <p>Welcome to the Staff home page.</p>
+<span class="sub">Special access is provided in this page.</span>
 
-<p>successful login.</p>
-
+  </div>
+  
 
 
       <div><img src="img1.png" alt="1" class="responsive"></div>
@@ -50,7 +54,7 @@
 
 <footer>   
       <div class="footer">
-        <p>Footer</p>
+        <p>epay</p>
       </div>
 </footer>   
 

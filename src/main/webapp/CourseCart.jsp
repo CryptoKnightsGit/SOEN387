@@ -63,7 +63,7 @@
 
 <footer>   
       <div class="footer">
-        <p>Footer</p>
+        <p>epay</p>
       </div>
 </footer>   
 

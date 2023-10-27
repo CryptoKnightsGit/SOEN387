@@ -7,6 +7,7 @@
 <link href="Main.css" rel="stylesheet" type="text/css"/>
 <link href="Footer.css" rel="stylesheet" type="text/css"/>
 <link href="Navbar.css" rel="stylesheet" type="text/css"/>
+<link href="CustomerHome.css" rel="stylesheet" type="text/css"/>
 </head>
 
 
@@ -14,9 +15,9 @@
 
 <body>
 
-  <div class="wrapper">
+  <div  class="wrapper" >
     <nav>
-      <a href="index.jsp" class="logo">Logo</a>
+      <a href="#" class="logo">Logo</a>
       <ul>
         <li>
           <a href="Products.jsp">ViewAllProducts</a>
@@ -30,8 +31,12 @@
       </ul>
     </nav>
   </div>
+  
+  <div id="main" >
+    <p>Welcome to the customer home page.</p>
 
-<p>successful login.</p>
+  </div>
+
 
 
 
