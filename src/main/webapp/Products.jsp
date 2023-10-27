@@ -23,7 +23,7 @@
           <a href="Products.jsp">ViewAllProducts</a>
         </li>
         <li>
-          <a href="CustomerCart.jsp">CustomerCart</a>
+          <a href="CustomerCart.jsp">Cart</a>
         </li>
         <li>
           <a href="Stafflogin.jsp">StaffLog</a>

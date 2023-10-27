@@ -23,13 +23,16 @@
           <a href="StaffViewProducts.jsp">ViewAllProducts</a>
         </li>
         <li>
-          <a href="CustomerCart.jsp">CustomerCart</a>
+          <a href="CustomerCart.jsp">Cart</a>
         </li>
         <li>
           <a href="index.jsp">Log out</a>
         </li>
         <li>
           <a href="CreateProduct.jsp">Createprd</a>
+        </li>
+        <li>
+          <a href="DownloadProducts.jsp">DownloadAllProducts</a>
         </li>
       </ul>
     </nav>

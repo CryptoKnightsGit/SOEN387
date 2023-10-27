@@ -39,7 +39,7 @@ public class User {
 
     public Product getProduct(int sku) {
         // Replace "products.json" with the path to your local JSON file
-        String jsonFilePath = "src\\main\\products.json";
+        String jsonFilePath = "src\\main\\webapp\\products.json";
 
         try {
             // Read the JSON data from the file
@@ -67,7 +67,7 @@ public class User {
 
     public List<Product> getAllProducts() {
         // Replace "products.json" with the path to your local JSON file
-        String jsonFilePath = "src\\main\\products.json";
+        String jsonFilePath = "src\\main\\webapp\\products.json";
 
         try {
             // Read the JSON data from the file

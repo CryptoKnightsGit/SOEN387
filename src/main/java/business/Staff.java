@@ -13,19 +13,20 @@ import com.google.gson.reflect.TypeToken;
 public class Staff extends User {
     // Constructor
     public Staff(long userId, String username, String email, String password) {
-        super(userId, username, email, password);  // Call the superclass (User) constructor
+        super(userId, username, email, password); // Call the superclass (User) constructor
     }
 
-      // Staff-specific method to create a new product
+    // Staff-specific method to create a new product
     public void createProduct(int sku, String name, String description, String vendor, String slug, double price) {
         // Create a new product with the given SKU and name
-        Product newProduct = new Product(sku, name, description, vendor, slug, price);  
+        Product newProduct = new Product(sku, name, description, vendor, slug, price);
 
         // Perform any additional logic, such as adding the new product to the database
-        try{
-            //read existing product catalog
-            FileReader fileReader = new FileReader("src\\main\\products.json");
-            List<Product> products = new Gson().fromJson(fileReader, new TypeToken<List<Product>>() {}.getType());
+        try {
+            // read existing product catalog
+            FileReader fileReader = new FileReader("src\\main\\webapp\\products.json");
+            List<Product> products = new Gson().fromJson(fileReader, new TypeToken<List<Product>>() {
+            }.getType());
             fileReader.close();
 
             // Check if a product with the same SKU already exists
@@ -52,16 +53,15 @@ public class Staff extends User {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
             // Write the updated product catalog back to the JSON file
-            FileWriter fileWriter = new FileWriter("src\\main\\products.json");
+            FileWriter fileWriter = new FileWriter("src\\main\\webapp\\products.json");
             fileWriter.write(gson.toJson(products));
             fileWriter.close();
             System.out.println("Product added to the catalog successfully.");
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
             System.err.println("Error adding product to the product catalog.");
         }
-        
-        
+
     }
 
     public void updateProduct(Product product, String newName, String newDescription, double newPrice) {
@@ -69,16 +69,18 @@ public class Staff extends User {
         product.setName(newName);
         product.setDescription(newDescription);
         product.setPrice(newPrice);
-    
-        // Perform any additional product management logic here, such as updating the database
+
+        // Perform any additional product management logic here, such as updating the
+        // database
     }
 
     // Staff-specific method to download a list of all products
-     public void downloadProductCatalog() {
+    public void downloadProductCatalog() {
         try {
             // Read the existing JSON file
-            FileReader fileReader = new FileReader("src\\main\\products.json");
-            List<Product> products = new Gson().fromJson(fileReader, new TypeToken<List<Product>>() {}.getType());
+            FileReader fileReader = new FileReader("src\\main\\webapp\\products.json");
+            List<Product> products = new Gson().fromJson(fileReader, new TypeToken<List<Product>>() {
+            }.getType());
 
             // Create a Gson object with pretty printing enabled
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -88,7 +90,8 @@ public class Staff extends User {
             fileWriter.write(gson.toJson(products));
             fileWriter.close();
 
-            System.out.println("Product catalog downloaded successfully.");
+            System.out.println(
+                    "Product catalog downloaded successfully. The downloadedCatalog.json should be found in src\\main");
         } catch (IOException e) {
             e.printStackTrace();
             System.err.println("Error downloading the product catalog.");
@@ -97,4 +100,3 @@ public class Staff extends User {
 
     // Additional staff-specific methods can be added as needed
 }
-

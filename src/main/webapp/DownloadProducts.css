@@ -1,0 +1,9 @@
+.download-button {
+    text-align: center;
+}
+
+.download-button input[type="submit"] {
+    /* Optional: Adjust the button's styling */
+    margin: 0; /* Reset any default margin */
+    display: inline-block; /* Make sure the button doesn't take the full width */
+}

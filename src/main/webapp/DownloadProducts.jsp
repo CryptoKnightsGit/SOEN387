@@ -3,12 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>prdpage</title>
-<link href="Product.css" rel="stylesheet" type="text/css"/>
+<title>homep</title>
+<link href="Main.css" rel="stylesheet" type="text/css"/>
 <link href="Footer.css" rel="stylesheet" type="text/css"/>
 <link href="Navbar.css" rel="stylesheet" type="text/css"/>
-
+<link href="DownloadProducts.css" rel="stylesheet" type="text/css"/>
 </head>
+
+
+
 
 <body>
 
@@ -23,7 +26,7 @@
           <a href="CustomerCart.jsp">Cart</a>
         </li>
         <li>
-          <a href="Stafflogin.jsp">StaffLog</a>
+          <a href="index.jsp">Log out</a>
         </li>
         <li>
           <a href="CreateProduct.jsp">Createprd</a>
@@ -32,19 +35,17 @@
     </nav>
   </div>
 
+  <div class="download-button">
+    <form action = "download" method = get >
+      <input type="submit" value="DOWNLOAD ALL PRODUCTS">
+  </div>
 
-  <h1>More info below</h1>
-      <section class="shop-section">
-        <div class="shop-images">
-          <div class="shop-link">
-            <img src="shop1.png" alt="card">
-          </div>
-        </div>
-      </section>
+
+
 
 <footer>   
       <div class="footer">
-        <p>epay</p>
+        <p>Footer</p>
       </div>
 </footer>   
 
