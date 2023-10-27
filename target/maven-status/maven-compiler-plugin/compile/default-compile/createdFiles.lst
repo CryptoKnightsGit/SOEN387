@@ -10,6 +10,7 @@ business\User$2.class
 business\ShoppingCart.class
 servlets\loginServlet.class
 business\Customer.class
+servlets\customerLoginServlet.class
 servlets\changePrdServlet.class
 business\User$1.class
 business\User.class
