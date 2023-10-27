@@ -28,12 +28,12 @@
         <li>
           <a href="Stafflogin.jsp">StaffLog</a>
         </li>
-        <li>
-          <a href="CreateProduct.jsp">Createprd</a>
-        </li>
       </ul>
     </nav>
   </div>
+  <div>
+
+    <form action = "products" method="get">
   <% List<Product> allProducts = (List<Product>) request.getAttribute("allProducts"); %>
     <% if (allProducts != null) { %>
         <ul>
@@ -49,6 +49,10 @@
         <p>No products available.</p>
     <% } %>
 
+
+    <button class = "button">Click here for the list of products</button>
+  </form>
+  </div>
 
 <footer>   
       <div class="footer">

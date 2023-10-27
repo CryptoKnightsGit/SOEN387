@@ -20,7 +20,7 @@
       <a href="#" class="logo">Logo</a>
       <ul>
         <li>
-          <a href="Products.jsp">ViewAllProducts</a>
+          <a href="StaffViewProducts.jsp">ViewAllProducts</a>
         </li>
         <li>
           <a href="CustomerCart.jsp">Cart</a>
