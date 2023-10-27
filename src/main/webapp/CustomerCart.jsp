@@ -51,6 +51,7 @@
               <h4><%= cartItems.get(i).getName() %></h4>
               <p><%= cartItems.get(i).getDescription() %></p>
               <p><%= cartItems.get(i).getPrice() %></p>
+              <button type="submit">Remove from Cart</button>
           </li>
       <% } %>
   </ul>
