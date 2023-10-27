@@ -28,6 +28,9 @@
         <li>
           <a href="Stafflogin.jsp">StaffLog</a>
         </li>
+        <li>
+          <a href="CustomerLogin.jsp">Customer Login</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -42,6 +45,7 @@
                     <h4><%= allProducts.get(i).getName() %></h4>
                     <p><%= allProducts.get(i).getDescription() %></p>
                     <p><%= allProducts.get(i).getPrice() %></p>
+                    <button type="submit" class="button-remove">Add to cart</button>
                 </li>
             <% } %>
         </ul>

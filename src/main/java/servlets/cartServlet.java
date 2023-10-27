@@ -8,6 +8,7 @@ import business.Product;
 import business.ShoppingCart;
 import jakarta.servlet.ServletException;
 
+@jakarta.servlet.annotation.WebServlet("/cart")
 public class cartServlet extends jakarta.servlet.http.HttpServlet {
 
      protected void doPost(jakarta.servlet.http.HttpServletRequest request,

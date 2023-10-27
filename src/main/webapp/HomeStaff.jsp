@@ -23,9 +23,6 @@
           <a href="StaffViewProducts.jsp">ViewAllProducts</a>
         </li>
         <li>
-          <a href="CustomerCart.jsp">Cart</a>
-        </li>
-        <li>
           <a href="index.jsp">Log out</a>
         </li>
         <li>

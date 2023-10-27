@@ -19,14 +19,17 @@
     <nav>
       <a href="index.jsp" class="logo">Logo</a>
       <ul>
-        <li>
-            <a href="StaffViewProducts.jsp">ViewAllProducts</a>
+          <li>
+            <a href="CreateProduct.jsp">Createprd</a>
           </li>
           <li>
-            <a href="CustomerCart.jsp">CustomerCart</a>
+            <a href="index.jsp">Log out</a>
           </li>
           <li>
             <a href="CreateProduct.jsp">Createprd</a>
+          </li>
+          <li>
+            <a href="DownloadProducts.jsp">DownloadAllProducts</a>
           </li>
       </ul>
     </nav>
