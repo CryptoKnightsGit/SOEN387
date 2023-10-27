@@ -1,6 +1,7 @@
 # SOEN387
 Assignments for SOEN387 Fall 2023
 Ashiqur Rahman
+Zain Khan
 
 The development environment used and instructions on how to compile the application:
 For this specific assigmnent we are using maven on vscode with the java extensions as well as the community server extension for tomcat
