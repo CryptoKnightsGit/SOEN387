@@ -10,8 +10,6 @@
 </head>
 
 
-
-
 <body>
 
   <div class="wrapper">
@@ -34,19 +32,9 @@
 
 
 
-      <div>Section1</div>
-      <div>Section2</div>
-      <div>Section3</div>
-
-
-
-
-
-
-
 <footer>   
       <div class="footer">
-        <p>Footer</p>
+        <p>epay</p>
       </div>
 </footer>   
 

@@ -22,7 +22,7 @@ public class customerLoginServlet extends jakarta.servlet.http.HttpServlet{
 
         //hardcoded for customer only.
         //need to add handling at a later time....
-        if(u.equalsIgnoreCase("  ") && p.equalsIgnoreCase("  "))
+        if(u.equalsIgnoreCase("") && p.equalsIgnoreCase(""))
 		{
 
            
@@ -30,6 +30,7 @@ public class customerLoginServlet extends jakarta.servlet.http.HttpServlet{
             	RequestDispatcher req = request.getRequestDispatcher("/index.jsp");
 			req.include(request, response);
 		}
+        
 		else{
            	 RequestDispatcher req = request.getRequestDispatcher("/CustomerHome.jsp");
 			req.forward(request, response);
