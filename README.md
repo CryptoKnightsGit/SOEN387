@@ -1,18 +1,26 @@
 # SOEN387
 Assignments for SOEN387 Fall 2023
+
 Ashiqur Rahman
+
 Zain Khan
 
-The development environment used and instructions on how to compile the application:
-For this specific assigmnent we are using maven on vscode with the java extensions as well as the community server extension for tomcat
-to run the project, youll have to add tomcat as a server and start it from the "servers" tab in vs code on the left side, following this
-right click on it to then add deploymenet which is the war file called theprj.war, then go to local host 8080 and selecting the theprj
-will bring you to the home index. 
+## Development Environment and Compilation Instructions
 
-for staff users login has been defaulted to:
-username : staff
-password: secret
+For this specific assignment, we are using Maven in VS Code with the Java extensions, as well as the Community Server extension for Tomcat.
 
-for normal users the defaulted is any info is fine as long it is not blank.
+To run the project, you'll need to:
 
-if reccuring errors do by any chance occur please mvn clean install.
+1. Add Tomcat as a server and start it from the "Servers" tab in VS Code on the left side.
+2. Right-click on it to add deployment, which is the WAR file called theprj.war.
+3. Go to localhost:8080, and select the "theprj" application, which will bring you to the home index.
+
+For staff users, login credentials have been defaulted to:
+- Username: staff
+- Password: secret
+
+For normal users, any non-blank information is fine.
+
+If recurring errors occur, please run the following command to clean and install the project:
+```bash
+mvn clean install
