@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>homep</title>
-<link href="CourseCart.css" rel="stylesheet" type="text/css"/>
+<link href="CustomerCart.css" rel="stylesheet" type="text/css"/>
 <link href="Footer.css" rel="stylesheet" type="text/css"/>
 <link href="Navbar.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -25,7 +25,7 @@
           <a href="Products.jsp">ViewAllProducts</a>
         </li>
         <li>
-          <a href="CourseCart.jsp">CourseCart</a>
+          <a href="CustomerCart.jsp">Cart</a>
         </li>
         <li>
           <a href="Stafflogin.jsp">StaffLog</a>
@@ -39,18 +39,18 @@
 
   <% 
   Customer c = new Customer(); 
-  Product tempcart = new Product(13, "pname", "pdescription", "pvendor", "pslug", 12.9);
-  List<Product> cart = c.removeFromCart(tempcart); 
-
+  Product tempProduct = new Product(13, "pname", "pdescription", "pvendor", "pslug", 12.9);
+  c.addToCart(tempProduct); 
+  ShoppingCart customerCart = c.getCart();
 %>
-<% if (cart != null) { %>
+<% if (customerCart != null) { %>
+  <% List<Product> cartItems = customerCart.getItems(); %>
   <ul>
-      <% for (int i = 0; i < 3; i++) { %>
+      <% for (int i = 0; i < cartItems.size(); i++) { %>
           <li>
-              <p>${fn:escapeXml(cart.get(i).getName())}</p>
-              <h4><%= cart.get(i).getName() %></h4>
-              <p><%= cart.get(i).getDescription() %></p>
-              <p><%= cart.get(i).getPrice() %></p>
+              <h4><%= cartItems.get(i).getName() %></h4>
+              <p><%= cartItems.get(i).getDescription() %></p>
+              <p><%= cartItems.get(i).getPrice() %></p>
           </li>
       <% } %>
   </ul>

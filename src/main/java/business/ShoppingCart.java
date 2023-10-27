@@ -1,10 +1,11 @@
 package business;
 
+import business.Product;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingCart {
-    private List<Product> items;  // List of products in the shopping cart
+    private List<Product> items; // List of products in the shopping cart
 
     public ShoppingCart() {
         items = new ArrayList<>();
@@ -29,5 +30,9 @@ public class ShoppingCart {
     // Get the list of products in the shopping cart
     public List<Product> getItems() {
         return items;
+    }
+
+    public int getSize() {
+        return items.size();
     }
 }

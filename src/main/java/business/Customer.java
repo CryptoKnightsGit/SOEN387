@@ -5,40 +5,39 @@ import java.util.List;
 
 public class Customer extends User {
 
-    private List<Product> shoppingCart;  // List of products in the shopping cart
-    private long userId;        // Unique identifier for the user
-    private String username;    // User's username
-    private String email;       // User's email address
-    private String password;    // User's password (hash or encrypted)
+    private ShoppingCart shoppingCart; // List of products in the shopping cart
+    private long userId; // Unique identifier for the user
+    private String username; // User's username
+    private String email; // User's email address
+    private String password; // User's password (hash or encrypted)
 
     // Constructor
     public Customer(long userId, String username, String email, String password) {
-        super(userId, username, email, password);  // Call the superclass (User) constructor
-        shoppingCart = new ArrayList<>();  // Initialize an empty shopping cart
+        super(userId, username, email, password); // Call the superclass (User) constructor
+        shoppingCart = new ShoppingCart(); // Initialize an empty shopping cart
     }
 
     public Customer() {
 
-        this.userId=0;
-        this.username="default";
-        this.email="something@.com";
-        this.password= "secret";
-
-
+        this.userId = 0;
+        this.username = "default";
+        this.email = "something@.com";
+        this.password = "secret";
+        shoppingCart = new ShoppingCart();
     }
 
     // Getters and setters for customer-specific attributes
-    public List<Product> getCart() {
-        return shoppingCart;
+    public ShoppingCart getCart() {
+        return this.shoppingCart;
     }
 
     // Customer-specific methods
     public void addToCart(Product product) {
-        shoppingCart.add(product);
+        shoppingCart.addItem(product);
     }
 
-    public List<Product> removeFromCart(Product product) {
-        shoppingCart.remove(product);
+    public ShoppingCart removeFromCart(Product product) {
+        shoppingCart.removeItem(product);
         return shoppingCart;
     }
 
