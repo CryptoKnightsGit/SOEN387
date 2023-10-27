@@ -37,11 +37,11 @@
                 <form class="login"  action = "loginstaff" method = post>
                     <div class="login__field">
                         <i class="login__icon fas fa-user"></i>
-                        <input type="text" class="login__input" name = "username" >
+                        <input type="text" class="login__input" name = "username" placeholder="Username" >
                     </div>
                     <div class="login__field">
                         <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" name = "password" >
+                        <input type="password" class="login__input" name = "password" placeholder="Password" >
                     </div>
                     <button class="button login__submit">
                         <span class="button__text">Log In Here</span>
