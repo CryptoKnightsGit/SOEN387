@@ -28,6 +28,9 @@
                 
               <a href="Stafflogin.jsp">Staff Login</a>
             </li>
+            <li>
+              <a href="CustomerLogin.jsp">Customer Login</a>
+            </li>
           </ul>
         </nav>
       </div>
