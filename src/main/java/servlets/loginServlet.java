@@ -7,7 +7,7 @@ import jakarta.servlet.ServletException;
 
 
 
-@jakarta.servlet.annotation.WebServlet("/login")
+@jakarta.servlet.annotation.WebServlet("/loginstaff")
 public class loginServlet extends jakarta.servlet.http.HttpServlet {
 
 
