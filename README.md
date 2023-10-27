@@ -5,6 +5,8 @@ Ashiqur Rahman
 
 Zain Khan
 
+Ibrahim Sidawi
+
 ## Development Environment and Compilation Instructions
 
 For this specific assignment, we are using Maven in VS Code with the Java extensions, as well as the Community Server extension for Tomcat.
