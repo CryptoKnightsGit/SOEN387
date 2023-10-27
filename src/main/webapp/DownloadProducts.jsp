@@ -7,6 +7,7 @@
 <link href="Main.css" rel="stylesheet" type="text/css"/>
 <link href="Footer.css" rel="stylesheet" type="text/css"/>
 <link href="Navbar.css" rel="stylesheet" type="text/css"/>
+<link href="DownloadProducts.css" rel="stylesheet" type="text/css"/>
 </head>
 
 
@@ -30,23 +31,14 @@
         <li>
           <a href="CreateProduct.jsp">Createprd</a>
         </li>
-        <li>
-          <a href="DownloadProducts.jsp">DownloadAllProducts</a>
-        </li>
       </ul>
     </nav>
   </div>
 
-<p>successful login.</p>
-
-
-
-      <div><img src="img1.png" alt="1" class="responsive"></div>
-      <div><img src="img2.png" alt="2" class="responsive"></div>
-      <div><img src="img3.png" alt="3" class="responsive"></div>
-
-
-
+  <div class="download-button">
+    <form action = "download" method = get >
+      <input type="submit" value="DOWNLOAD ALL PRODUCTS">
+  </div>
 
 
 

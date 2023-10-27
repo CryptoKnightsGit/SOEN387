@@ -51,7 +51,8 @@ public class testDriver {
         //////////////////////////////////////////////////////////////////////////////
         // downloadProductCatalog test
         System.out
-                .println("\n\n\nNow we test the createProduct() and downloadProductCatalog() staff member functions:");
+                .println(
+                        "\n\n\nNow we test the createProduct() and downloadProductCatalog() staff member functions:");
         Staff staff = new Staff(3, "staff", "staff@gmail.com", "password");
         staff.createProduct(321, "staffCreatedProduct", "This was created in the testDriver.java", "amazon",
                 "product-321", 99.56);
