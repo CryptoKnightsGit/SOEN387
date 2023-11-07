@@ -10,14 +10,21 @@
             <a class="nav-link active" aria-current="page" href="index.jsp">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="customerLogin.jsp">Login</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="cart.jsp">Cart</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="orders.jsp">Orders</a>
-          </li>
+         
+          <%if(authorizedCustomer != null){ %>
+            <li class="nav-item">
+              <a class="nav-link" href="orders.jsp">Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customer-logout">Logout</a>
+            </li>
+          <%}else{ %>
+            <li class="nav-item">
+              <a class="nav-link" href="customerLogin.jsp">Login</a>
+            </li>
+          <% } %>
         </ul>
       </div>
     </div>

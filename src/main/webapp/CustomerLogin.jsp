@@ -1,3 +1,10 @@
+
+<%@page import="business.*" %>
+<% Customer authorizedCustomer = (Customer) request.getSession().getAttribute("authorizedCustomer"); 
+    if (authorizedCustomer!=null){
+		response.sendRedirect("index.jsp");
+    } %>
+
 <!doctype html>
 <html lang="en">
   <head>

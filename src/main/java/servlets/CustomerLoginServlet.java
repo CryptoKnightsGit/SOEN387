@@ -29,7 +29,8 @@ public class CustomerLoginServlet extends HttpServlet {
                 CustomerObject customerDBObject = new CustomerObject(dbConnection.getConnection());
                 Customer customer = customerDBObject.customerLogin(email, password);
                 if (customer != null) {
-                    out.print("Customer logged in!");
+                    request.getSession().setAttribute("authorizedCustomer", customer);
+                    response.sendRedirect("index.jsp");
                 } else {
                     out.print("Customer login failed");
                 }
